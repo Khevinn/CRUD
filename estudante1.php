@@ -27,6 +27,14 @@
   tr:nth-child(even){
     background:#09BC13;
     
+  }
+  div{
+  
+  height: 50px;
+  width: 80px;
+
+  }
+
   </style>
 
   
@@ -36,34 +44,22 @@
         $estudantes[$i] = explode(",", $estudantes[$i]);
     }
 ?>
-  <table>
-  <tr>
-    <th>Nome</th>
-    <th>E-mail</th>
-    <th>Matrícula</th>
-    <th>Idade</th>
-  </tr>
-   <?php foreach($estudantes as $key => $estudante):?>
-    <tr>
-    <?php foreach($estudante as $estudante1):?>
-      <td><?= $estudante1?></td>
-  <?php endforeach?>
-    <td>
-    <a class="btn-remove" href="implode.php?id=<?= $key?>"> X </a>
-    </td>
-      </tr>
-    <?php endforeach?>
-  </table>
+
+
   <form action="functions3.php" method="POST">
-      <legend><strong>Cadastro do Estudante</strong></legend>
+      <legend><strong>Cadastro de Usuários</strong></legend>
+        <div>
         <input type="text"  name="nome" placeholder="Nome">
 <input type="email" name="email" id="email" placeholder="Ex: creyton@email.com">
 <input type="number" name="matricula" id="matricula" placeholder="Ex: 0014955">  
-        <input type="number" name="idade" placeholder="Idade">
+        
+      <input type="number" name="idade" placeholder="Idade">
+
 
 
 
       <input type="submit" value="Inserir">
+    </div>
   </form>
 
 
